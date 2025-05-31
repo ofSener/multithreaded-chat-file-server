@@ -1,0 +1,16 @@
+[32mConnected to server 127.0.0.1:8080[0m
+Enter your username: [32mConnected successfully![0m
+
+[36mAvailable Commands:[0m
+  /join <room_name>           - Join or create a room
+  /leave                      - Leave the current room
+  /broadcast <message>        - Send message to everyone in the room
+  /whisper <username> <msg>   - Send private message to user
+  /sendfile <filename> <user> - Send file to user
+  /help                       - Show this help message
+  /exit                       - Disconnect from server
+
+[33mFile restrictions:[0m .txt, .pdf, .jpg, .png (max 3MB)
+[33mUsername/Room rules:[0m Alphanumeric only, max 16/32 chars
+
+> [32mDisconnected. Goodbye![0m

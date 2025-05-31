@@ -1,0 +1,10 @@
+This is a test file for the chat server file transfer functionality.
+It contains some sample text to demonstrate that file transfers work correctly.
+
+Features tested:
+- File upload queue management
+- File size validation
+- File type validation
+- Thread-safe file operations
+
+This file should be successfully transferred between users. 

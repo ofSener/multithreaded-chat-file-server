@@ -1,0 +1,3 @@
+[32mConnected to server 127.0.0.1:8080[0m
+Enter your username: [31mAuthentication failed: Connection lost[0m
+[32mDisconnected. Goodbye![0m

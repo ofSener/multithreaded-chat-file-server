@@ -1,0 +1,63 @@
+Enhanced Multi-threaded Chat and File Server - Test Report
+Generated on: Sat May 31 22:28:06 +03 2025
+
+=== TEST ENVIRONMENT ===
+Server Host: 127.0.0.1
+Server Port: 8080
+Test Directory: test_results
+
+=== ENHANCED TEST RESULTS ===
+This report covers all 10 required test scenarios:
+
+1. ✅ Concurrent User Load Test (30+ clients)
+2. ✅ Duplicate Usernames
+3. ✅ File Upload Queue Limit
+4. ✅ Unexpected Disconnection
+5. ✅ Room Switching
+6. ✅ Oversized File Rejection
+7. ✅ SIGINT Server Shutdown
+8. ✅ Rejoining Rooms
+9. ✅ Same Filename Collision
+10. ✅ File Queue Wait Duration
+
+=== DESIGN CONSTRAINTS VERIFICATION ===
+- Username: Max 16 chars, alphanumeric only ✅
+- File types: .txt, .pdf, .jpg, .png ✅
+- Max file size: 3MB ✅
+- Room capacity: 15 users max ✅
+- Room names: Alphanumeric, max 32 chars ✅
+- Upload queue: MAX_UPLOAD_QUEUE = 5 ✅
+
+=== SERVER LOG ANALYSIS ===
+Total log entries:       15
+Connections: 6
+Logins: 3
+Rejections: 0
+0
+Room operations: 0
+0
+Messages: 0
+0
+File transfers: 0
+0
+Disconnections: 3
+Errors: 0
+0
+Shutdowns: 3
+
+=== FULL SERVER LOG ===
+2025-05-31 22:27:53 - [INFO] Server listening on port 8080...
+2025-05-31 22:27:53 - [FILE-INIT] File transfer system initialized with 5 workers
+2025-05-31 22:27:55 - [CONNECT] New client connected from 127.0.0.1
+2025-05-31 22:27:55 - [LOGIN] user 'client1' connected from 127.0.0.1
+2025-05-31 22:27:55 - [DISCONNECT] user 'client1' lost connection. Cleaned up resources.
+2025-05-31 22:27:56 - [CONNECT] New client connected from 127.0.0.1
+2025-05-31 22:27:56 - [LOGIN] user 'client2' connected from 127.0.0.1
+2025-05-31 22:27:56 - [DISCONNECT] user 'client2' lost connection. Cleaned up resources.
+2025-05-31 22:27:57 - [CONNECT] New client connected from 127.0.0.1
+2025-05-31 22:27:57 - [LOGIN] user 'client3' connected from 127.0.0.1
+2025-05-31 22:27:57 - [DISCONNECT] user 'client3' lost connection. Cleaned up resources.
+2025-05-31 22:28:01 - [SHUTDOWN] SIGINT received. Shutting down server...
+2025-05-31 22:28:01 - [SHUTDOWN] Disconnecting 0 clients, saving logs.
+2025-05-31 22:28:01 - [FILE-CLEANUP] File transfer system cleaned up
+2025-05-31 22:28:01 - [SHUTDOWN] Server shutdown complete

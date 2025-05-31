@@ -1,0 +1,50 @@
+2025-01-20 14:02:31 - [INFO] Server listening on port 5000...
+2025-01-20 14:02:31 - [FILE-INIT] File transfer system initialized with 5 workers
+2025-01-20 14:02:45 - [CONNECT] New client connected from 192.168.1.100
+2025-01-20 14:02:46 - [LOGIN] user 'alice12' connected from 192.168.1.100
+2025-01-20 14:02:52 - [ROOM-CREATE] Room 'project1' created
+2025-01-20 14:02:52 - [JOIN] user 'alice12' joined room 'project1'
+2025-01-20 14:03:01 - [CONNECT] New client connected from 192.168.1.44
+2025-01-20 14:03:02 - [LOGIN] user 'john45' connected from 192.168.1.44
+2025-01-20 14:03:05 - [ROOM-CREATE] Room 'team1' created
+2025-01-20 14:03:05 - [JOIN] user 'john45' joined room 'team1'
+2025-01-20 14:03:12 - [BROADCAST] user 'john45': Hello team!
+2025-01-20 14:03:18 - [CONNECT] New client connected from 192.168.1.184
+2025-01-20 14:03:19 - [LOGIN] user 'emre2025' connected from 192.168.1.184
+2025-01-20 14:03:22 - [JOIN] user 'emre2025' joined room 'teamchat'
+2025-01-20 14:03:25 - [BROADCAST] user 'emre2025': Hello team!
+2025-01-20 14:03:30 - [WHISPER] emre2025 -> john42: Can you check this?
+2025-01-20 14:03:35 - [COMMAND] emre2025 initiated file transfer to john42
+2025-01-20 14:03:35 - [FILE-QUEUE] Upload 'homework.pdf' from emre2025 to john42 added to queue. Queue size: 1
+2025-01-20 14:03:35 - [SEND FILE] 'homework.pdf' sent from emre2025 to john42 (success)
+2025-01-20 14:03:40 - [CONNECT] New client connected from 192.168.1.200
+2025-01-20 14:03:41 - [REJECTED] Duplicate username attempted: alice12
+2025-01-20 14:04:15 - [CONNECT] New client connected from 192.168.1.150
+2025-01-20 14:04:16 - [LOGIN] user 'bob99' connected from 192.168.1.150
+2025-01-20 14:04:20 - [JOIN] user 'bob99' joined room 'project1'
+2025-01-20 14:04:25 - [BROADCAST] user 'bob99': Hi everyone!
+2025-01-20 14:04:30 - [WHISPER] alice12 -> bob99: Welcome to the team
+2025-01-20 14:05:00 - [COMMAND] alice12 initiated file transfer to bob99
+2025-01-20 14:05:00 - [FILE-QUEUE] Upload 'project.pdf' from alice12 to bob99 added to queue. Queue size: 1
+2025-01-20 14:05:01 - [SEND FILE] 'project.pdf' sent from alice12 to bob99 (success)
+2025-01-20 14:05:30 - [ERROR] File 'huge_data.zip' from user 'bob99' exceeds size limit.
+2025-01-20 14:06:00 - [LEAVE] user 'emre2025' left room 'teamchat'
+2025-01-20 14:06:00 - [ROOM-DESTROY] Room 'teamchat' destroyed (empty)
+2025-01-20 14:06:05 - [JOIN] user 'emre2025' joined room 'project1'
+2025-01-20 14:06:10 - [ROOM] user 'emre2025' left room 'teamchat', joined 'project1'
+2025-01-20 14:06:15 - [BROADCAST] user 'emre2025': Switched to this room
+2025-01-20 14:07:00 - [DISCONNECT] user 'john45' lost connection. Cleaned up resources.
+2025-01-20 14:07:00 - [ROOM-DESTROY] Room 'team1' destroyed (empty)
+2025-01-20 14:08:30 - [COMMAND] alice12 initiated file transfer to bob99
+2025-01-20 14:08:30 - [FILE-QUEUE] Upload 'code.zip' from alice12 to bob99 added to queue. Queue size: 1
+2025-01-20 14:08:30 - [FILE] 'code.zip' from user 'alice12' started upload after 0 seconds in queue
+2025-01-20 14:08:31 - [SEND FILE] 'code.zip' sent from alice12 to bob99 (success)
+2025-01-20 14:09:00 - [FILE] Conflict: 'project.pdf' renamed to avoid collision
+2025-01-20 14:10:00 - [SHUTDOWN] SIGINT received. Shutting down server...
+2025-01-20 14:10:00 - [SHUTDOWN] Disconnecting 3 clients, saving logs.
+2025-01-20 14:10:01 - [DISCONNECT] user 'alice12' lost connection. Cleaned up resources.
+2025-01-20 14:10:01 - [DISCONNECT] user 'bob99' lost connection. Cleaned up resources.
+2025-01-20 14:10:01 - [DISCONNECT] user 'emre2025' lost connection. Cleaned up resources.
+2025-01-20 14:10:01 - [FILE-CLEANUP] File transfer system cleaned up
+2025-01-20 14:10:01 - [SHUTDOWN] Server shutdown initiated
+2025-01-20 14:10:01 - [SHUTDOWN] Server shutdown complete 
