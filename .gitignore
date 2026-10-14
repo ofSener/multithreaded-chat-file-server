@@ -1,0 +1,6 @@
+test_results/
+uploads/
+server_log.txt
+*.o
+chatserver
+chatclient

@@ -1,2 +1,0 @@
-Connection failed: Connection refused
-Failed to connect to server
